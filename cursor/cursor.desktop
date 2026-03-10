@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Cursor
+Exec=/home/%u/.local/bin/cursor.appimage --no-sandbox
+Icon=cursor-icon
+Type=Application
+Categories=Development;TextEditor;IDE;
+Terminal=false
+MimeType=text/plain;
+Comment=AI-powered code editor
+StartupWMClass=Cursor
