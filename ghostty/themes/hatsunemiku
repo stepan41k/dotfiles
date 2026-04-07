@@ -1,0 +1,32 @@
+# Тема: hatsunemiku
+# Path: ~/.config/ghostty/themes/hatsunemiku
+
+background = #242829
+foreground = #dcd7d7
+cursor-color = #7cc7d6
+selection-background = #1a86b9
+selection-foreground = #ffffff
+
+# Normal colors (Palette 0-7)
+palette = 0=#242829
+palette = 1=#df2683
+palette = 2=#13868c
+palette = 3=#fcfcdf
+palette = 4=#1a86b9
+palette = 5=#bc7fd2
+palette = 6=#7cc7d6
+palette = 7=#4a4b4b
+
+# Bright colors (Palette 8-15)
+palette = 8=#7b8b99
+palette = 9=#df2683
+palette = 10=#13868c
+palette = 11=#fcfcdf
+palette = 12=#1a86b9
+palette = 13=#bc7fd2
+palette = 14=#7cc7d6
+palette = 15=#dcd7d7
+
+cursor-color = #7cc7d6
+selection-background = #1a86b9
+selection-foreground = #ffffff
