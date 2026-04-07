@@ -1,35 +1,35 @@
 [user]
-       	email = stepan41kr.zont@gmail.com
-       	name = stepan41k
+    email = stepan41kr.zont@gmail.com
+    name = stepan41k
 [pull]
-       	rebase = false
+    rebase = false
 
 [init]
-      		defaultBranch = "main"
+    defaultBranch = "main"
 
 [diff]
-       	external = difft
-       	algorithm = "histogram"
-       	colorMoved = "plain"
-       	renames = true
+    external = difft
+    algorithm = "histogram"
+    colorMoved = "plain"
+    renames = true
 
 [fetch]
-       	all = true
-       	prune = true
+    all = true
+    prune = true
 
 [merge]
-       	conflictStyle = "zdiff3"
+    conflictStyle = "zdiff3"
 
 [pull]
-       	ff = "only"
+    ff = "only"
 
 [push]
-       	autoSetupRemote = true
-       	default = "simple"
-      		followTags = true
+    autoSetupRemote = true
+    default = "simple"
+    followTags = true
 
 [rebase]
-       	autoSquash = true
+    autoSquash = true
 
 [alias]
-       	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
