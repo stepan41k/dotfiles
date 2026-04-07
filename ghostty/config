@@ -1,9 +1,13 @@
-#--- Fonts ---
+# --- Fonts ---
 font-family = "JetBrainsMono Nerd Font"
 font-size = 10
 font-thicken = true
 
-# Ligature
+# --- Window  Size---
+window-width = 160
+window-height = 35
+
+# --- Ligature ---
 font-feature = calt
 font-feature = liga
 
