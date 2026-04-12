@@ -3,10 +3,11 @@
     "git_panel": {
         "tree_view": false,
     },
-    "icon_theme": "Colored Zed Icons Theme Dark",
+    "icon_theme": "Catppuccin Mocha",
     "terminal": {
         "font_size": 11.0,
         "blinking": "on",
+        "copy_on_select": true,
     },
     "project_panel": {
         "auto_fold_dirs": false,
@@ -31,6 +32,31 @@
     "theme": {
         "mode": "dark",
         "light": "Gruvbox Light",
-        "dark": "Tokyo Night Storm",
-    }
+        "dark": "Catppuccin Mocha",
+    },
+    "languages": {
+        "C": {
+            "show_edit_predictions": false
+        },
+        "C++": {
+            "show_edit_predictions": false
+        },
+        "Java": {
+            "show_edit_predictions": false,
+        },
+        "Go": {
+            "language_servers": ["gopls"],
+        },
+    },
+    "lsp": {
+        "gopls": {
+            "initialization_options": {
+                "env": {
+                    "GOROOT": "/home/stepan41k/sdk/go1.26.0",
+                    "GOPATH": "/home/stepan41k/go",
+                    "PATH": "/home/stepan41k/sdk/go1.26.0/bin:/home/stepan41k/go/bin:/usr/local/bin:/usr/bin",
+                },
+            },
+        },
+    },
 }
