@@ -1,62 +1,125 @@
 {
-    "vim_mode": false,
-    "git_panel": {
-        "tree_view": false,
+    // Panels
+    "outline_panel": {
+        "dock": "left",
     },
-    "icon_theme": "Catppuccin Mocha",
-    "terminal": {
-        "font_size": 11.0,
-        "blinking": "on",
-        "copy_on_select": true,
+    "collaboration_panel": {
+        "dock": "left",
     },
     "project_panel": {
+        "dock": "left",
+        "default_width": 300,
         "auto_fold_dirs": false,
+        "indent_size": 18,
+        "starts_open": false,
     },
-    "base_keymap": "Cursor",
-    "minimap": {
+
+    // Scrollbar
+    "scrollbar": {
         "show": "auto",
-    },
-    "cursor_blink": true,
-    "autosave": {
-        "after_delay": {
-            "milliseconds": 1500,
+        "cursors": false,
+        "git_diff": false,
+        "search_results": true,
+        "selected_text": true,
+        "selected_symbol": true,
+        "diagnostics": "all",
+        "axes": {
+            "horizontal": true,
+            "vertical": true,
         },
     },
-    "buffer_font_family": "JetBrains Mono",
-    "auto_indent_on_paste": true,
-    "linked_edits": true,
-    "soft_wrap": "editor_width",
-    "tab_size": 4,
-    "ui_font_size": 16,
-    "buffer_font_size": 14.0,
-    "theme": {
-        "mode": "dark",
-        "light": "Gruvbox Light",
-        "dark": "Catppuccin Mocha",
+
+    // Git
+    "git_panel": {
+        "button": true,
+        "dock": "left",
+        "default_width": 360,
+        "status_style": "label_color",
+        "fallback_branch_name": "main",
+        "sort_by_path": false,
+        "collapse_untracked_diff": false,
+        "scrollbar": {
+            "show": "never",
+        },
+        "starts_open": false,
     },
+
+    // Languages
     "languages": {
-        "C": {
-            "show_edit_predictions": false
-        },
-        "C++": {
-            "show_edit_predictions": false
+        "Go": {
+            "show_edit_predictions": false,
         },
         "Java": {
             "show_edit_predictions": false,
         },
-        "Go": {
-            "language_servers": ["gopls"],
+    },
+
+    // Agents
+    "agent": {
+        "dock": "right",
+        "default_model": {
+            "provider": "google",
+            "model": "gemini-3-flash-preview",
+            "enable_thinking": false,
+        },
+        "favorite_models": [],
+        "model_parameters": [],
+    },
+    "agent_servers": {
+        "opencode": {
+            "type": "registry",
+        },
+        "qwen-code": {
+            "type": "registry",
+        },
+        "gemini": {
+            "type": "registry",
         },
     },
-    "lsp": {
-        "gopls": {
-            "initialization_options": {
-                "env": {
-                    "GOROOT": "/home/stepan41k/sdk/go1.26.0",
-                    "GOPATH": "/home/stepan41k/go",
-                    "PATH": "/home/stepan41k/sdk/go1.26.0/bin:/home/stepan41k/go/bin:/usr/local/bin:/usr/bin",
-                },
-            },
+
+    // Teminal
+    "terminal": {
+        "font_size": 12,
+        "font_family": "JetBrains Mono",
+        "blinking": "on",
+    },
+
+    // Fonts
+    "buffer_font_family": "JetBrains Mono",
+    "buffer_font_size": 14,
+    "ui_font_family": "Inter",
+    "ui_font_size": 17,
+    "ui_font_weight": 300,
+
+    // Themes
+    "icon_theme": "Catppuccin Mocha",
+    "theme": {
+        "mode": "dark",
+        "light": "Catppuccin Mocha",
+        "dark": "Catppuccin Mocha",
+    },
+
+    // Session
+    "when_closing_with_no_tabs": "keep_window_open",
+    "restore_on_file_reopen": false,
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000,
         },
+    },
+
+    // Other
+    "auto_indent_on_paste": true,
+    "linked_edits": true,
+    "soft_wrap": "editor_width",
+    "tab_size": 4,
+    "extend_comment_on_newline": false,
+    "drag_and_drop_selection": {
+        "enabled": false,
+    },
+    "base_keymap": "Cursor",
+    "cursor_blink": true,
+    "minimap": {
+        "show": "never",
     },
 }
