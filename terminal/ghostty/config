@@ -34,14 +34,14 @@ focus-follows-mouse = false
 
 # --- Shortcuts ---
 keybind = super+t=new_tab
-keybind = super+c=close_tab
+keybind = super+shift+c=close_tab
 
 # --- Splits ---
 keybind = super+z=new_split:right
 keybind = super+shift+z=new_split:down
 
 # --- Close surface ---
-keybind = super+shift+c=close_surface
+keybind = super+c=close_surface
 
 # --- Switching beteween splits ---
 keybind = alt+left=goto_split:left
