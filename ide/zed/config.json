@@ -102,6 +102,7 @@
     // Session
     "when_closing_with_no_tabs": "keep_window_open",
     "restore_on_file_reopen": false,
+    "restore_on_startup": "launchpad",
     "autosave": {
         "after_delay": {
             "milliseconds": 1000,
