@@ -1,53 +1,156 @@
-# 💻 Stepan41k's Dotfiles (Fedora + Alacritty + Zsh)
+# Dotfiles
 
-My personal configuration files for a fast, minimalist, and productive terminal environment on Fedora Linux.
+Personal development environment configuration for Fedora Linux.
 
-## ✨ Features
+## Overview
 
-- **Terminal:** [Alacritty](https://github.com/alacritty/alacritty) — GPU-accelerated terminal emulator.
-- **Shell:** [Zsh](https://www.zsh.org/) with [Oh My Zsh](https://ohmyz.sh/) framework.
-- **Font:** [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) for perfect icon rendering.
-- **Syntax Highlighting:** Real-time feedback (Green = valid, Red = error).
-- **Auto-suggestions:** Completions based on your command history.
+This repository contains my personal dotfiles and configuration scripts for setting up a complete development environment, including:
 
-## 🚀 Quick Start
+- **Shell**: Zsh with Oh My Zsh, autosuggestions, and syntax highlighting
+- **Terminal**: Alacritty and Ghostty configurations
+- **Git**: Optimized Git configuration with aliases and diff settings
+- **IDEs**: Cursor and Zed editor configurations
+- **Fonts**: JetBrainsMono Nerd Font installation
 
-To set up this environment on a fresh **Fedora** installation, run the following commands (do **not** use `sudo` for the script itself):
+## Quick Start
+
+Run the installation script to set up everything automatically:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/stepan41k/dotfiles.git
-cd dotfiles
-
-# 2. Make the installer executable
-chmod +x install.sh
-
-# 3. Run the installation script
 ./install.sh
-
 ```
 
-Note: The script installs required packages via dnf, downloads Nerd Fonts, sets up Oh My Zsh, and creates symbolic links for the configuration files.
-📂 Project Structure
-alacritty/ — Terminal configuration (colors, fonts, padding).
-zsh/ — .zshrc config and plugin installation scripts.
-fonts/ — Automated Nerd Fonts installer.
-install.sh — Main installer script.
-🛠 Management & Customization
-Since the installer uses symbolic links, any changes you make inside this repository folder will be applied to your system immediately.
-Edit Alacritty: nano ~/dotfiles/alacritty/alacritty.toml
-Edit Zsh: nano ~/dotfiles/zsh/.zshrc
+The script will:
+1. Install required packages (alacritty, zsh, git, curl, unzip, fontconfig)
+2. Install JetBrainsMono Nerd Font
+3. Install Oh My Zsh if not present
+4. Install Zsh plugins (autosuggestions, syntax-highlighting)
+5. Copy configuration files to appropriate locations
+6. Set Zsh as the default shell
 
-Apply Zsh changes:
+## Structure
+
+```
+.
+├── install.sh              # Main installation script
+├── git/
+│   └── config              # Git configuration
+├── zsh/
+│   ├── .zshrc              # Zsh shell configuration
+│   └── install_plugins.sh  # Zsh plugins installer
+├── terminal/
+│   ├── alacritty/          # Alacritty terminal config
+│   │   ├── alacritty.toml
+│   │   └── themes/
+│   └── ghostty/            # Ghostty terminal config
+│       ├── config
+│       └── themes/
+├── ide/
+│   ├── cursor/             # Cursor IDE configuration
+│   │   ├── cursor_user_config.json
+│   │   ├── cursor.desktop
+│   │   ├── install.sh
+│   │   └── manual.md
+│   └── zed/                # Zed editor configuration
+│       ├── config.json
+│       └── install.sh
+├── other/
+│   └── fonts/
+│       └── install_fonts.sh # Font installation script
+├── utils/                  # Utility scripts and configs
+└── warp/                   # Warp terminal configs
+```
+
+## Components
+
+### Git Configuration
+
+Located in `git/config`, includes:
+- Default branch set to `main`
+- Histogram diff algorithm with external `difft` tool
+- Fast-forward only pulls
+- Auto-setup remote on push
+- `git graph` alias for visual log
+
+### Zsh Configuration
+
+Located in `zsh/.zshrc`, features:
+- Oh My Zsh with `robbyrussell` theme
+- Plugins: git, zsh-autosuggestions, zsh-syntax-highlighting, sudo
+- Tokyo Night color scheme for syntax highlighting
+- Custom aliases for ls, Docker, Go, and config management
+- Golang environment setup
+
+### Terminal Emulators
+
+**Alacritty** (`terminal/alacritty/alacritty.toml`):
+- JetBrainsMono Nerd Font at 12pt
+- Block cursor with blinking
+- Window padding and transparency
+
+**Ghostty** (`terminal/ghostty/config`):
+- JetBrainsMono Nerd Font at 10pt with ligatures
+- Hatsunemiku theme
+- Custom keybindings for tabs, splits, and navigation
+- Window padding and blur effects
+
+### IDE Configurations
+
+**Cursor** (`ide/cursor/`):
+- Tokyo Night Storm theme
+- Prettier formatting (tabs, no semicolons, single quotes)
+- Go, SQL, and Protobuf tooling
+- File nesting and minimap settings
+- GitHub Copilot disabled by default
+
+**Zed** (`ide/zed/config.json`):
+- Catppuccin Mocha theme and icons
+- Cursor keymap
+- AI agent integration (Gemini, OpenCode, Qwen)
+- Auto-save, soft wrap, linked edits
+- Left-docked panels
+
+## Manual Setup
+
+If you prefer to install components individually:
+
+### Install Fonts
 
 ```bash
-source ~/.zshrc
-
+chmod +x other/fonts/install_fonts.sh
+./other/fonts/install_fonts.sh
 ```
 
-❓ Troubleshooting
-Text issues? Check font name: fc-list :family | grep -i jetbrains. It must match the name in alacritty.toml.
-Shell not changing? Log out and Log in again. If needed, run: chsh -s $(which zsh).
-Missing Icons? Ensure you are using the "Nerd Font" version of JetBrains Mono.
+### Install Zsh Plugins
 
+```bash
+chmod +x zsh/install_plugins.sh
+./zsh/install_plugins.sh
+```
 
+### Setup Git Config
+
+```bash
+cp git/config ~/.gitconfig
+```
+
+### Setup Terminal Configs
+
+```bash
+mkdir -p ~/.config/alacritty
+cp terminal/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+
+mkdir -p ~/.config/ghostty
+cp terminal/ghostty/config ~/.config/ghostty/config
+```
+
+## Requirements
+
+- Fedora Linux (uses `dnf` package manager)
+- Non-root user (script will refuse to run as root)
+
+## Notes
+
+- After running `install.sh`, restart your terminal or run `exec zsh`
+- Some IDE configs may contain machine-specific paths that need adjustment
+- The `warp/` directory is currently empty, reserved for future Warp terminal config
