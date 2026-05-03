@@ -1,16 +1,75 @@
-[window]
-padding = { x = 10, y = 10 }
-dynamic_padding = true
-opacity = 0.98
-
+# --- Fonts ---
 [font]
-normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
-italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
-size = 12.0
+size = 10.0
 
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
 
+# Alacritty не имеет прямого аналога font-thicken, 
+# но можно слегка увеличить межбуквенное расстояние или жирность через offset
+[font.offset]
+x = 0
+y = 0
 
-[cursor]
-style = { shape = "Block", blinking = "Always" }
+# --- Window Size ---
+[window.dimensions]
+columns = 160
+lines = 35
+
+# --- Window and Opacity ---
+[window]
+opacity = 1.0
+blur = true
+decorations = "full"
+
+# --- Padding inside window ---
+[window.padding]
+x = 12
+y = 12
+
+# --- Cursor ---
+[cursor.style]
+shape = "Block"
+blinking = "Always"
+
+[mouse]
+hide_when_typing = true
+
+[colors.primary]
+background = "#1a1c1d"
+foreground = "#dfdfdf"
+
+[colors.normal]
+black   = "#000000"
+red     = "#ff5f8d"
+green   = "#39c5bb"
+yellow  = "#f3e600"
+blue    = "#4ec4e8"
+magenta = "#b47af5"
+cyan    = "#39c5bb"
+white   = "#ffffff"
+
+# --- Selection ---
+[selection]
+save_to_clipboard = true
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "C"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "NextWindow"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "PreviousWindow"
+key = "Left"
+mods = "Alt"
