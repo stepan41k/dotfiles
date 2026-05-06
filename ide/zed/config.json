@@ -46,6 +46,15 @@
 
     // Languages
     "languages": {
+        "Markdown": {
+            "show_edit_predictions": false
+        },
+        "Assembly": {
+            "show_edit_predictions": false
+        },
+        "Python": {
+            "show_edit_predictions": false
+        },
         "Go": {
             "show_edit_predictions": false,
         },
