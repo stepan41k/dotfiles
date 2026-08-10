@@ -29,15 +29,17 @@ alias ll='ls -lah --color=auto' # ls with permissions
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Golang
-export GOROOT="/home/stepan41k/sdk/go1.26.0"
-export PATH="$GOROOT/bin:$PATH"
+# export GOROOT="/home/stepan41k/sdk/go1.26.0"
+export PATH=$PATH:$(go env GOPATH)/bin
 alias go='/home/stepan41k/sdk/go1.26.0/bin/go' # Go sdk
 
 
 # Configs
 alias gitconf='micro ~/.gitconfig' # Open Git configuration
-alias ghostconf='micro ~/.config/ghostty/config' # Open Ghostty configuration
 alias zconf="micro ~/.zshrc" # Open zsh configuration
+alias ghostconf='micro ~/.config/ghostty/config' # Open Ghostty configuration
+alias alacrconf='micro ~/.config/alacritty/alacritty.toml' # Open Alacritty configuration
+
 
 # Docker aliases
 alias dstart='sudo systemctl start docker.socket docker.service' # Docker daemon start
