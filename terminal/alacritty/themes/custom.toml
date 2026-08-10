@@ -1,0 +1,54 @@
+[colors.primary]
+# background = '#242829'
+background = '#1e1e2e'
+foreground = '#dcd7d7'
+
+[colors.normal]
+black   = '#242829'
+red     = '#df2683'
+green   = '#13868c'
+yellow  = '#fcfcdf'
+blue    = '#1a86b9'
+magenta = '#bc7fd2'
+cyan    = '#7cc7d6'
+white   = '#4a4b4b'
+
+[colors.bright]
+black   = '#7b8b99'
+red     = '#df2683'
+green   = '#13868c'
+yellow  = '#fcfcdf'
+blue    = '#1a86b9'
+magenta = '#bc7fd2'
+cyan    = '#7cc7d6'
+white   = '#dcd7d7'
+
+# [colors.primary]
+# background = '#1e1e2e'
+# foreground = '#cdd6f4'
+# dim_foreground = '#7f849c'
+# bright_foreground = '#cdd6f4'
+# 
+# [colors.cursor]
+# text = '#1e1e2e'
+# cursor = '#f5e0dc'
+# 
+# [colors.normal]
+# black = '#45475a'
+# red = '#f38ba8'
+# green = '#a6e3a1'
+# yellow = '#f9e2af'
+# blue = '#89b4fa'
+# magenta = '#f5c2e7'
+# cyan = '#94e2d5'
+# white = '#bac2de'
+# 
+# [colors.bright]
+# black = '#585b70'
+# red = '#f38ba8'
+# green = '#a6e3a1'
+# yellow = '#f9e2af'
+# blue = '#89b4fa'
+# magenta = '#f5c2e7'
+# cyan = '#94e2d5'
+# white = '#a6adc8'
