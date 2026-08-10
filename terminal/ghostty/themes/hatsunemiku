@@ -1,7 +1,7 @@
 # Тема: hatsunemiku
 # Path: ~/.config/ghostty/themes/hatsunemiku
 
-background = #242829
+background = #1e1e2e
 foreground = #dcd7d7
 cursor-color = #7cc7d6
 selection-background = #1a86b9
