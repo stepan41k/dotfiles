@@ -1,3 +1,1 @@
-sudo dnf install libsecret
-sudo dnf install git
-sudo dnf install openssh
+sudo dnf install -y libsecret git openssh flatpak
